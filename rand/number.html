@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Random Number Generator</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	</head>
-    
-	<body>
-        <div class="container">
-            <h1>Random Number Generator</h1>
-            <p>
-                <?php
-                    $num = rand(1, 100);
-                    $num1 = 58;
-                    echo "Random number between 1 and 100: " . $num1;
-                ?>
-            </p>
-        </div>
-    </body>
-	</body>
-	
+<html>
+<head>
+     <title>Generating a Random Number</title>
+</head>
+<body>
+     <div id="myNumber"></div>
+     Click <a href="no-javascript.html" id="getNumber">here</a> to get your number.
+     <script>
+          var link = document.getElementById('getNumber');
+          link.onclick = getNumber;
+          function getNumber() {
+               var minNumber = 0;
+               var maxNumber = 100;
+               var bigNumber = 67;
+               var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+               $('#myNumber').html(bigNumber);
+               return false;
+          }
+     </script>
+</body>
 </html>
